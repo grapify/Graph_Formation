@@ -27,6 +27,7 @@ void AddNode(node *node){
 void AddEdge(node *node1,node *node2){
 
 }
+
 int main(){
 
 }
