@@ -3,7 +3,7 @@
 using namespace std
 //create a vector
 
-vector<list<push<int ,int>> vec;
+vector<list<pair<int ,int>> vec;
 int i;
 
 
@@ -21,8 +21,14 @@ boolean isConnect(){
 }
 
 
+void shortestPath(){
+
+}
 
 
+void allPath(){
+
+}
 void AddEdge(int data,int data1,int weight){
     vec[data].push_back(make_pair(data1, weight));
 
@@ -34,6 +40,10 @@ void addNode(int data){
 }
 
 void menu(){
+    cout>>"press one to add node">>endl;
+    cout>>"press two to add edge">>endl;
+    count>>"press three to print the number of nodes"
+    cout>>
 
 }
 
@@ -77,7 +87,7 @@ int main(){
             int des;
             int start;
             cin>>des>>start;
-            allPAth(des,start);
+            allPath(des,start);
 
         }
     }
