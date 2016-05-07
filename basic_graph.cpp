@@ -10,15 +10,21 @@ typedef vector<pair<int ,int> > adlist;
 //create a vector
 int no_of_nodes;
 
-vector<adlist > > vec;
+vector<adlist> vec;
 
 void addNode(int data){
 	adlist temp ;
+	//temp=vec[data];
+	//if(vec[data])
 	temp.push_back(make_pair(NULL,NULL));
+	vec[data].push_back(temp);
 }
 
 void AddEdge(int data,int data1,int weight){
-    vec[data].push_back(make_pair(data1, weight));
+	adlist temp;
+	temp=vec[data];
+    temp.push_back(make_pair(data1, weight));
+    vec[data].push_back(temp);
 }
 
 
