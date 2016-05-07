@@ -4,20 +4,27 @@
 #include "utility"
 using namespace std;
 
-typedef vector<pair<int ,int> > adlist;
+
 
 >>>>>>> 54fcbf2230895ef5ee8853e87dfc36f6cd349588
-//create a vector
 int no_of_nodes;
-
+//create a vector
+typedef vector<pair<int ,int> > adlist;
 vector<adlist> vec;
+//no of edges
+int i=0;
 
 void addNode(int data){
-	adlist temp ;
-	//temp=vec[data];
-	//if(vec[data])
-	temp.push_back(make_pair(NULL,NULL));
-	vec[data].push_back(temp);
+	if(vec[data]==NULL){
+		adlist temp ;
+		//temp=vec[data];
+		temp.push_back(make_pair(NULL,NULL));
+		vec[data].push_back(temp);
+	}
+	else{
+		continue;
+	}
+	
 }
 
 void AddEdge(int data,int data1,int weight){
@@ -25,6 +32,9 @@ void AddEdge(int data,int data1,int weight){
 	temp=vec[data];
     temp.push_back(make_pair(data1, weight));
     vec[data].push_back(temp);
+    temp=vec[data1];
+    temp.push_back(make_pair(data,weight));
+    vec[data1].push_back(temp);
 }
 
 
