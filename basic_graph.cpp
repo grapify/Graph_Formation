@@ -13,7 +13,8 @@ int no_of_nodes;
 vector<adlist > > vec;
 
 void addNode(int data){
-	vec[data].push_back(make_pair(NULL,NULL));
+	adlist temp ;
+	temp.push_back(make_pair(NULL,NULL));
 }
 
 void AddEdge(int data,int data1,int weight){
