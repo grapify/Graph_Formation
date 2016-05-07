@@ -4,6 +4,8 @@
 #include "utility"
 using namespace std;
 
+typedef vector<pair<int ,int> > adlist;
+
 >>>>>>> 54fcbf2230895ef5ee8853e87dfc36f6cd349588
 //create a vector
 int no_of_nodes;
