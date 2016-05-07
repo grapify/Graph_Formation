@@ -1,15 +1,9 @@
 #include <iostream>
 #include <vector>
-<<<<<<< HEAD
 #include "list"
 #include "utility"
 using namespace std;
 
-=======
-#include <list>
-#include <utility>
-
-using namespace std
 >>>>>>> 54fcbf2230895ef5ee8853e87dfc36f6cd349588
 //create a vector
 int no_of_nodes;
