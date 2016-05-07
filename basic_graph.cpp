@@ -1,13 +1,23 @@
 #include <iostream>
 #include <vector>
-using namespace std
+#include "list"
+#include "utility"
+using namespace std;
+
 //create a vector
-int no_of_nodes
+int no_of_nodes;
 
 vector<list<pair<int ,int>> vec;
 int i;
 
 
+void addNode(int data){
+	vec.push_back(data);
+}
+
+void AddEdge(int data,int data1,int weight){
+    vec[data].push_back(make_pair(data1, weight));
+}
 
 
 int numberOfEdges(int data,int data1,int weight){
@@ -30,9 +40,9 @@ boolean isConnect(int data,int data1){
     }
 }
 
-int weight_of_edge(int data,int data1){
-	list< pair<int, int> >::iterator itr = adjacencyList[i].begin();
-	int temp=0;
+int weight_of_edge(int data,int data1,int *temp){
+	list< pair<int, int> >::iterator itr = vec[data].begin();
+	temp=0;
 	while(itr!=vec[data].end()){
     	if((*itr).first==data1){
     		return (*itr.second);
@@ -55,11 +65,6 @@ void allPath(){
 
 }
 
-void AddEdge(int data,int data1,int weight){
-    vec[data].push_back(make_pair(data1, weight));
-
-
-}
 
 void menu(){
     cout<<"press one to add node"<<endl;
@@ -107,6 +112,20 @@ int main(){
             allPath(des,start);
 
         }
+        else if(x==6){
+        	int data;
+        	int data1;
+        	cin>>data>>data1;
+        	int temp=0;
+        	int x=weight_of_edge(data,data1,*temp);
+        	if(temp!=0){
+        		cout<<"weight_of_edge="<<x;
+        	}
+        	else{
+        		cout<<"error:404"<<endl<<"the egde was not found";
+        	}
+        }
+
     }
     return 0;
 }
