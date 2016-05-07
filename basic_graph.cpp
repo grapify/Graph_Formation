@@ -10,9 +10,7 @@ typedef vector<pair<int ,int> > adlist;
 //create a vector
 int no_of_nodes;
 
-vector<vector<pair<int ,int> > > vec;
-int i;
-
+vector<adlist > > vec;
 
 void addNode(int data){
 	vec[data].push_back(make_pair(NULL,NULL));
