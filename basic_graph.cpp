@@ -8,12 +8,12 @@ using namespace std;
 //create a vector
 int no_of_nodes;
 
-vector<list<pair<int ,int> > > vec;
+vector<vector<pair<int ,int> > > vec;
 int i;
 
 
 void addNode(int data){
-	vec.push_back(data);
+	vec[data].push_back(make_pair(NULL,NULL));
 }
 
 void AddEdge(int data,int data1,int weight){
