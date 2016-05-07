@@ -1,10 +1,13 @@
 #include <iostream>
 #include <vector>
+#include <list>
+#include <utility>
+
 using namespace std
 //create a vector
 int no_of_nodes
 
-vector<list<pair<int ,int>> vec;
+vector<list<pair<int ,int> > > vec;
 int i;
 
 
@@ -16,7 +19,7 @@ int numberOfEdges(int data,int data1,int weight){
 
 
 boolean isConnect(int data,int data1){
-	list< pair<int, int> >::iterator itr = adjacencyList[i].begin();
+	list< pair<int, int> >::iterator itr = vec[data].begin();
 	int temp=0;
 	while(itr!=vec[data].end()){
     	if((*itr).first==data1){
@@ -27,21 +30,6 @@ boolean isConnect(int data,int data1){
     }
     if(temp==0){
     	return false;
-    }
-}
-
-int weight_of_edge(int data,int data1){
-	list< pair<int, int> >::iterator itr = adjacencyList[i].begin();
-	int temp=0;
-	while(itr!=vec[data].end()){
-    	if((*itr).first==data1){
-    		return (*itr.second);
-    		temp=1;
-    		break;	
-    	}
-    }
-    if(temp==0){
-    	return -1;
     }
 }
 
