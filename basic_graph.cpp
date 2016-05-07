@@ -30,6 +30,21 @@ boolean isConnect(int data,int data1){
     }
 }
 
+int weight_of_edge(int data,int data1){
+	list< pair<int, int> >::iterator itr = adjacencyList[i].begin();
+	int temp=0;
+	while(itr!=vec[data].end()){
+    	if((*itr).first==data1){
+    		return (*itr.second);
+    		temp=1;
+    		break;	
+    	}
+    }
+    if(temp==0){
+    	return -1;
+    }
+}
+
 
 void shortestPath(){
 
